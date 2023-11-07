@@ -1,0 +1,64 @@
+<mat-card>
+    <div>
+        <h1>Detalhes Funcionário</h1>
+    </div>
+    <div *ngIf="funcionario">
+        <form>
+            <div class="input_box">
+                <mat-form-field>
+                    <mat-label>Nome:</mat-label>
+                    <input matInput type="text" disabled value={{this.funcionario?.nome}}>
+                </mat-form-field>    
+            </div>
+
+            <div class="input_box">
+                <mat-form-field>
+                    <mat-label>Sobrenome:</mat-label>
+                    <input matInput type="text" disabled value={{this.funcionario?.sobrenome}}>
+                </mat-form-field>
+            </div>
+
+            <div class="input_box">
+                <mat-form-field>
+                    <mat-label>Departamento:</mat-label>
+                    <input matInput type="text" disabled value={{this.funcionario?.departamento}}>
+                </mat-form-field>        
+            </div>
+
+            <div class="input_box">
+                <mat-form-field>
+                <mat-label>Turno:</mat-label>
+                <input matInput type="text" disabled value={{this.funcionario?.turno}}>
+            </mat-form-field>
+            </div>
+
+            <div class="input_box">
+                <mat-form-field>
+                    <mat-label>Situação:</mat-label>
+                    <input matInput type="text" disabled value={{this.funcionario?.ativo}}>
+                </mat-form-field>
+            </div>
+
+            <div class="input_box">
+                <mat-form-field>
+                    <mat-label>Data de Criação:</mat-label>
+                    <input matInput type="text" disabled value={{this.funcionario?.dataDeCriacao}}>
+                </mat-form-field>
+            </div>
+
+            <div class="input_box">
+                <mat-form-field>
+                    <mat-label>Data de Alteração:</mat-label>
+                    <input matInput type="text" disabled value={{this.funcionario?.dataDeAlteracao}}>
+                </mat-form-field>
+            </div>
+
+            <div class="btn-box">
+                <button (click)="InativaFuncionario()" mat-raised-button color="warn">Inativar Usuario</button>
+                <button [routerLink]="['/']" mat-raised-button> Voltar </button>
+            </div>
+            
+        </form>
+    </div>
+
+</mat-card>
